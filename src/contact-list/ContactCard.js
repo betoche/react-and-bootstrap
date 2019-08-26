@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Container, Col, Button } from 'reactstrap';
-import { FaHeadphones, FaUser, FaEnvelope, FaHome } from 'react-icons/lib/fa';
+import { FaHeadphones, FaUser, FaEnvelope, FaHome } from 'react-icons/fa';
 
 const ContactCard = ({ contact }) => {
 

@@ -2,7 +2,7 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NarbarBrand,
+    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -32,7 +32,7 @@ class Navigationmenu extends Component {
 
     render() {
 
-        render(
+        return (
 
             <div>
                 <Navbar color="light" light expand="lg">

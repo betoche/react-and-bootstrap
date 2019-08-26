@@ -11,7 +11,7 @@ const contactsAPI = 'https://demo1443058.mockable.io/codeproject_tutorial/api/co
 
 class App extends Component {
     constructor(props, context) {
-        super(propx, context);
+        super(props, context);
 
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -34,8 +34,9 @@ class App extends Component {
             if (searchContact(contact, searchText)) {
                 this.setState(prevState => ({
                     searchResult: [...prevState.searchResult, contact]
-                }))
+                }));
             }
+            return true;
         })
     }
 
@@ -93,7 +94,8 @@ class App extends Component {
 
                             {/* Contact list */}
                             <ListGroup>
-                                {this.returnContactList.map(
+                                {console.log(this.returnContactList)}
+                                {this.state.searchResult.map(
                                     (contact) =>
                                         <ListGroupItem key={contact.email} className="list-group-item">
                                             <ContactCard contact={contact} />
@@ -116,7 +118,7 @@ const searchContact = (contact, searchText) => (
 
 export default App;
 
-
+/*
 function App() {
   return (
     <div className="App">
@@ -139,3 +141,4 @@ function App() {
 }
 
 export default App;
+*/
