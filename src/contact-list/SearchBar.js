@@ -2,6 +2,8 @@ import React from "react";
 
 const SearchBar = ({ onSearch }) => {
     const handleChange = e => {
+        console.log( "onSearch" );
+        console.log( onSearch );
         onSearch(e.target.value);
     }
 

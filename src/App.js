@@ -36,7 +36,6 @@ class App extends Component {
                     searchResult: [...prevState.searchResult, contact]
                 }));
             }
-            return true;
         })
     }
 
@@ -89,12 +88,11 @@ class App extends Component {
                             <AddContactsModal show={this.state.show} onClose={this.handleClose} />
 
                             {/* Search bar */}
-                            <SearchBar onSearch={this.state.show} />
+                            <SearchBar onSearch={this.handleSearch} />
                             <br />
 
                             {/* Contact list */}
                             <ListGroup>
-                                {console.log(this.returnContactList)}
                                 {this.state.searchResult.map(
                                     (contact) =>
                                         <ListGroupItem key={contact.email} className="list-group-item">
